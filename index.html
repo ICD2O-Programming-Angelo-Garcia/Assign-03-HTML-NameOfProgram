@@ -1,9 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Miles per Hour to Kilometers per Hour Converter" />
+    <meta name="keywords" content="mph, km/h, converter" />
+    <meta name="author" content="Angelo Garcia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miles per Hour to Kilometers per Hour Converter</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script defer src="css/style.css"></script>
+
+    <!-- Link to the external script file -->
+    <script src="js/script.js" defer></script>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Miles per Hour to Kilometers per Hour Converter</span>
+        </div>
+      </header>
+
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img
+                src="https://media.istockphoto.com/id/1183169813/vector/speedometer-icon-vector-isolated-design-element-speed-indicator-sign-internet-speed-car.jpg?s=612x612&w=0&k=20&c=t-l3lSHcSGvVmqRSUs_baK8Jdy2FBi0ERgXUnJXjFzo="
+                width="75%" height="auto"
+                alt="Speedometer Icon"
+              />
+            </th>
+          </tr>
+        </table>
+
+        <!-- Miles per Hour Input -->
+        <form action="#">
+          <p>Enter speed in miles per hour (mph)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="mph-input"
+              min="0"
+            />
+            <label class="mdl-textfield__label" for="mph-input">Miles per Hour (mph)</label>
+            <span class="mdl-textfield__error">Please enter a valid number</span>
+          </div>
+        </form>
+
+        <!-- Convert Button -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="convertMphToKph()"
+        >
+          Convert to Kilometers per Hour
+        </button>
+
+        <br />
+
+        <!-- Result Display -->
+        <div id="result">
+          <!-- The converted result will be displayed here -->
+        </div>
+      </main>
+    </div>
   </body>
 </html>
